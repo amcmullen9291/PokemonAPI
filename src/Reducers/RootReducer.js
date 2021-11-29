@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import { ListingsReducer } from './PokemonReducer';
+import { ListingsReducer, SelectedPokemonReducer } from './PokemonReducer';
 
 const RootReducer = combineReducers({
-    PokemonListings: ListingsReducer
+    PokemonListings: ListingsReducer,
+    Pokemon: SelectedPokemonReducer
 });
 
 export default RootReducer;

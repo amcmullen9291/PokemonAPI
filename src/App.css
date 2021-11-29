@@ -1,6 +1,17 @@
 .pokemonBorder{
     border: 2px solid red;
+    background-color: antiquewhite;
     width: fit-content;
     margin-top: 2px;
     margin-bottom: 2px;
+}
+
+#title{
+    border-bottom: 6px dashed purple;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#mainBackground{
+    background-color: khaki;
 }

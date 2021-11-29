@@ -13,3 +13,12 @@ export const ListingsReducer = (state=initialState, {type, payload}) => {
             return state
     }
 };
+
+export const SelectedPokemonReducer = (state={}, {type, payload}) => {
+    switch (type) {
+        case ActionTypes.SELECTED_STADIUM:
+            return { ...state, ...payload};
+        default:
+            return state;
+    }
+}

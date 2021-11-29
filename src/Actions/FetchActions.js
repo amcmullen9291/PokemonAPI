@@ -5,3 +5,12 @@ export const setListings = (pokemon) => {
         payload: pokemon,
     }
 }
+
+export const PokemonReducer = (state={}, {type, payload}) => {
+    switch (type) {
+        case ActionTypes.SELECTED_POKEMON:
+            return { ...state, ...payload};
+        default:
+            return state;
+    }
+}
