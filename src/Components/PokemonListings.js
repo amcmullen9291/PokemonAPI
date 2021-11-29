@@ -8,12 +8,14 @@ import { setListings } from '../Actions/FetchActions';
 const PokemonListings = () => {
   const PokemonListings = useSelector((state) => state.PokemonListings);
   const dispatch = useDispatch();
+  let pokemon = [];
 
   const fetchPokemon = async () => {
 
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/ditto`)
     .then(response => {dispatch(setListings(response))})
-    .then(console.log(PokemonListings.list))
+    .then(console.log(PokemonListings.list.data.abilities[0].ability.name))
+    .then(console.log(PokemonListings.list.data.abilities[1].ability.name))
     .catch((error) => {
       console.log("Error:", error);
     });
@@ -22,7 +24,6 @@ const PokemonListings = () => {
   useEffect(() => {
     fetchPokemon();
   }, [])
-
 
 
   return (
