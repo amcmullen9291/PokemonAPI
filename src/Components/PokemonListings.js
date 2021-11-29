@@ -51,6 +51,7 @@ const PokemonListings = () => {
     <div id="mainBackground"> 
     <div>
       <h1 id="title"><center>Pokemon List:</center></h1>
+      <center><small><u>Details stats can be found at URLs listed below</u></small></center>
     </div>
     <br/>
       <div>
